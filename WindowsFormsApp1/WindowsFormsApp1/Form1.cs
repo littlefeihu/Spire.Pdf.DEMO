@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             PdfDocument doc = new PdfDocument();
-            doc.LoadFromFile(@"D:\Test\Spire.Pdf.DEMO\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\FromIMG.pdf");
+            doc.LoadFromFile(@"D:\DQ\Spire.Pdf.DEMO\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\FromIMG.pdf");
 
             PdfRubberStampAnnotation loStamp = new PdfRubberStampAnnotation(new RectangleF(new PointF(200, 30), new SizeF(200, 200)));
             PdfAppearance loApprearance = new PdfAppearance(loStamp);
