@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
             PdfDocument doc = new PdfDocument();
             doc.LoadFromFile(@"D:\DQ\Spire.Pdf.DEMO\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\FromIMG.pdf");
 
-            PdfRubberStampAnnotation loStamp = new PdfRubberStampAnnotation(new RectangleF(new PointF(200, 30), new SizeF(200, 200)));
+            PdfRubberStampAnnotation loStamp = new PdfRubberStampAnnotation(new RectangleF(new PointF(0, 0), new SizeF(160, 160)));
             PdfAppearance loApprearance = new PdfAppearance(loStamp);
             PdfImage image = PdfImage.FromFile(@"D:\\1.png");
 
@@ -54,7 +54,6 @@ namespace WindowsFormsApp1
         {
             PdfDocument doc = new PdfDocument();
 
-
             // Create one page
             PdfPageBase page = doc.Pages.Add();
             //Draw the text
@@ -74,12 +73,16 @@ namespace WindowsFormsApp1
             // Create one page
             PdfPageBase page = doc.Pages.Add();
 
-            PdfImage pdfImage = PdfImage.FromFile(@"D:\1.jpg");
+            PdfImage pdfImage = PdfImage.FromFile(@"D:\2.jpg");
             //Draw the text
-            page.Canvas.DrawImage(pdfImage, new PointF(-15, -15));
+            page.Canvas.DrawImage(pdfImage, new PointF(0,0));
             //Save pdf file.
             doc.SaveToFile("FromIMG.pdf", FileFormat.PDF);
+            var img = doc.SaveAsImage(0, PdfImageType.Bitmap);
+            img.Save("1.jpg");
             doc.Close();
+
+
             System.Diagnostics.Process.Start("FromIMG.pdf");
         }
     }

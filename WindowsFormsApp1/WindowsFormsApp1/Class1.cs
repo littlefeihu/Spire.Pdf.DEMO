@@ -14,7 +14,7 @@ namespace Cachet
 
         Font Var_Font = new Font("Arial", 12, FontStyle.Bold);//定义字符串的字体样式
         //Rectangle rect = new Rectangle(10, 10, 160, 160);//实例化Rectangle类
-        private static int tem_Line = 160;//记录圆的直径
+        private static int tem_Line = 150;//记录圆的直径
         private static int circularity_W = 4;//设置圆画笔的粗细
         //圆线条
         private static Rectangle rect = new Rectangle(circularity_W, circularity_W, tem_Line - circularity_W * 2, tem_Line - circularity_W * 2);//设置圆的绘制区域
@@ -36,7 +36,7 @@ namespace Cachet
         {
 
             string star_Str = "★";
-            Bitmap bMap = new Bitmap(160, 160);//画图初始化
+            Bitmap bMap = new Bitmap(150, 150);//画图初始化
             Graphics g = Graphics.FromImage(bMap);
             //Graphics g = this.panel1.CreateGraphics();//实例化Graphics类
             g.SmoothingMode = SmoothingMode.AntiAlias;//消除绘制图形的锯齿
